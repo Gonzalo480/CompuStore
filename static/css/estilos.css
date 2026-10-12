@@ -1,0 +1,1133 @@
+/* ========================================
+   FONDO DEL BODY (Actualizado)
+======================================== */
+body {
+    font-family: Arial, sans-serif;
+    
+    background-image: url("/static/img/SistemaComputacion\ \(2\).png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    color: white;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    position: relative; /* Necesario para ubicar los botones abajo */
+}
+
+/* ========================================
+   ESTILOS PARA LOS TÍTULOS (Encabezado bien ajustado)
+======================================== */
+h1 {
+    color: white;
+    margin: 25px 0 5px 0;
+    font-size: 38px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 12px rgba(37, 99, 235, 1);
+    text-align: center;
+}
+
+h2 {
+    color: white;
+    margin: 5px 0 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.descripcion-principal {
+    color: white;
+    font-size: 17px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* ========================================
+   OCULTAR TEXTOS DUPLICADOS (Si usas la imagen con textos)
+======================================== */
+.textos-ocultos {
+    display: none; 
+}
+
+/* ========================================
+   POSICIÓN DE LOS BOTONES DEL INDEX
+======================================== */
+.contenedor-botones-index {
+    position: absolute;
+    bottom: 12%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+    flex-wrap: wrap; 
+    width: 90%;
+    
+    /* Sin recuadros, totalmente transparente */
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* ========================================
+   ESTILO DE LOS BOTONES TRANSPARENTES
+======================================== */
+.btn-index {
+    background-color: transparent; 
+    color: #93c5fd; 
+    border: 1px solid #1e3a8a; 
+    border-radius: 25px; 
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-index:hover {
+    background-color: rgba(30, 58, 138, 0.4); 
+    color: white;
+    border-color: #3b82f6; 
+}
+
+
+/* ========================================
+   PÁGINA DE INICIO DE SESIÓN
+======================================== */
+
+body.pagina-login {
+    background-image: none;
+    background-color: #0b1530;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Título principal */
+
+body.pagina-login h1 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.8);
+}
+
+/* Subtítulo */
+
+body.pagina-login h2 {
+    color: #93c5fd;
+    margin: 0 0 25px 0;
+}
+
+/* Formulario */
+
+body.pagina-login form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #142344;
+    padding: 30px;
+    border: 1px solid #294775;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Etiquetas */
+
+body.pagina-login label {
+    color: #e2e8f0;
+}
+
+/* Campos */
+
+body.pagina-login input {
+    background-color: #0b1530;
+    color: white;
+    border: 1px solid #3b5990;
+    margin-bottom: 10px;
+}
+
+/* Botón */
+
+body.pagina-login button {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 8px;
+}
+
+body.pagina-login button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Enlace para volver */
+
+body.pagina-login a {
+    color: #93c5fd;
+    margin-top: 15px;
+}
+
+
+/* Centrar usuario y contraseña en el formulario */
+
+body.pagina-login form {
+    text-align: center;
+}
+
+body.pagina-login form label {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+body.pagina-login form input {
+    display: block;
+    width: 100%;
+    margin: 0 auto 18px auto;
+}
+
+
+/* ========================================
+   PÁGINA DE CREAR CUENTA
+======================================== */
+
+body.pagina-registro {
+    background-image: none;
+    background-color: #0b1530;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+body.pagina-registro h1 {
+    color: white;
+    margin: 0 0 10px 0;
+    font-size: 34px;
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.8);
+}
+
+body.pagina-registro h2 {
+    color: #93c5fd;
+    margin: 0 0 25px 0;
+}
+
+body.pagina-registro form {
+    width: 100%;
+    max-width: 400px;
+    background-color: #142344;
+    padding: 30px;
+    border: 1px solid #294775;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+body.pagina-registro form label {
+    display: block;
+    color: #e2e8f0;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+body.pagina-registro form input {
+    display: block;
+    width: 100%;
+    margin: 0 auto 18px auto;
+    background-color: #0b1530;
+    color: white;
+    border: 1px solid #3b5990;
+}
+
+body.pagina-registro form button {
+    width: 100%;
+    margin: 10px 0;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 8px;
+}
+
+body.pagina-registro form button:hover {
+    background-color: #1d4ed8;
+}
+
+body.pagina-registro a {
+    color: #93c5fd;
+    margin-top: 15px;
+}
+
+
+/* ========================================
+   PÁGINA MI PERFIL
+======================================== */
+
+body.pagina-perfil {
+    background-image: url("/static/img/SistemaComputacion%20%282%29.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #0b1530;
+    color: white;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Títulos */
+
+body.pagina-perfil h1,
+body.pagina-perfil h2 {
+    color: white;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* Contenedor de botones sin recuadro */
+
+body.pagina-perfil .contenedor-botones-perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 90%;
+    margin: 35px auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Botones de Mi perfil */
+
+body.pagina-perfil .btn-perfil {
+    background-color: rgba(11, 21, 48, 0.65);
+    color: #93c5fd;
+    border: 1px solid #1e3a8a;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.pagina-perfil .btn-perfil:hover {
+    background-color: rgba(30, 58, 138, 0.8);
+    color: white;
+    border-color: #3b82f6;
+    transform: translateY(-2px);
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+    body.pagina-perfil .contenedor-botones-perfil {
+        flex-direction: column;
+    }
+
+    body.pagina-perfil .btn-perfil {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+
+/* ========================================
+   AJUSTES DE MI PERFIL
+======================================== */
+
+/* Mensaje de bienvenida más grande */
+
+body.pagina-perfil #perfilMensaje {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+}
+
+/* Bajar los botones */
+
+body.pagina-perfil #opcionesPerfil {
+    margin-top: 65px;
+}
+
+/* Separar el botón Volver al inicio */
+
+body.pagina-perfil #opcionesPerfil + .contenedor-botones-perfil {
+    margin-top: 25px;
+}
+
+/* Ajuste para celulares */
+
+@media (max-width: 600px) {
+    body.pagina-perfil #perfilMensaje {
+        font-size: 22px;
+    }
+
+    body.pagina-perfil #opcionesPerfil {
+        margin-top: 45px;
+    }
+}
+
+/* ========================================
+   PÁGINA AGREGAR PRODUCTO
+======================================== */
+
+body.pagina-agregar-producto {
+    background-image: none;
+    background-color: #0b1530;
+
+    color: white;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Encabezado */
+
+body.pagina-agregar-producto .encabezado-productos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body.pagina-agregar-producto .encabezado-productos h1 {
+    color: white;
+    margin: 10px 0;
+    font-size: 34px;
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.8);
+}
+
+body.pagina-agregar-producto .encabezado-productos p {
+    color: #bfdbfe;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Contenedor principal */
+
+body.pagina-agregar-producto .contenido-agregar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Formulario */
+
+body.pagina-agregar-producto .formulario-producto {
+    width: 100%;
+    max-width: 450px;
+
+    background-color: #142344;
+    padding: 30px;
+
+    border: 1px solid #294775;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Título del formulario */
+
+body.pagina-agregar-producto .formulario-producto h2 {
+    color: #93c5fd;
+    font-size: 25px;
+    margin: 0 0 12px 0;
+}
+
+/* Texto descriptivo */
+
+body.pagina-agregar-producto .texto-formulario {
+    color: #cbd5e1;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Campos del formulario */
+
+body.pagina-agregar-producto .campo-producto {
+    margin-bottom: 18px;
+}
+
+body.pagina-agregar-producto .campo-producto label {
+    display: block;
+    color: #e2e8f0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+/* Cajas de texto */
+
+body.pagina-agregar-producto .campo-producto input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    background-color: #0b1530;
+    color: white;
+
+    border: 1px solid #3b5990;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Efecto al seleccionar un campo */
+
+body.pagina-agregar-producto .campo-producto input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Color del texto de ejemplo */
+
+body.pagina-agregar-producto .campo-producto input::placeholder {
+    color: #64748b;
+}
+
+/* Botón Agregar producto */
+
+body.pagina-agregar-producto .btn-guardar-producto {
+    display: block;
+    width: 100%;
+
+    padding: 13px;
+    margin-top: 25px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+body.pagina-agregar-producto .btn-guardar-producto:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Mensaje de resultado */
+
+body.pagina-agregar-producto #mensajeProducto {
+    color: #93c5fd;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Botón Volver al perfil */
+
+body.pagina-agregar-producto .btn-volver-perfil {
+    display: block;
+    width: 100%;
+
+    padding: 11px;
+    margin-top: 15px;
+
+    background-color: transparent;
+    color: #93c5fd;
+
+    border: 1px solid #1e3a8a;
+    border-radius: 8px;
+
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+body.pagina-agregar-producto .btn-volver-perfil:hover {
+    background-color: #1e3a8a;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+    body.pagina-agregar-producto {
+        padding: 15px;
+    }
+
+    body.pagina-agregar-producto .formulario-producto {
+        padding: 22px;
+    }
+
+    body.pagina-agregar-producto .encabezado-productos h1 {
+        font-size: 30px;
+    }
+}
+
+/* ========================================
+   PÁGINA VER PRODUCTOS
+======================================== */
+
+body.pagina-productos {
+    background-image: none;
+    background-color: #0b1530;
+    color: white;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+}
+
+/* Encabezado */
+
+body.pagina-productos .encabezado-lista-productos {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+body.pagina-productos .encabezado-lista-productos h1 {
+    margin: 10px 0;
+    font-size: 34px;
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.8);
+}
+
+body.pagina-productos .encabezado-lista-productos p {
+    color: #bfdbfe;
+    font-size: 15px;
+}
+
+/* Contenido principal */
+
+body.pagina-productos .contenido-lista-productos {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+body.pagina-productos .contenido-lista-productos > h2 {
+    color: #93c5fd;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+body.pagina-productos .descripcion-productos {
+    color: #cbd5e1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Rejilla de tarjetas */
+
+body.pagina-productos .rejilla-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+}
+
+/* Tarjeta individual */
+
+body.pagina-productos .tarjeta-producto {
+    background-color: #142344;
+    border: 1px solid #294775;
+    border-radius: 15px;
+
+    padding: 24px;
+    text-align: center;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+body.pagina-productos .tarjeta-producto:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+}
+
+/* Icono */
+
+body.pagina-productos .icono-producto {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+/* Nombre */
+
+body.pagina-productos .tarjeta-producto h3 {
+    color: white;
+    font-size: 20px;
+    overflow-wrap: anywhere;
+    margin: 10px 0;
+}
+
+/* Categoría */
+
+body.pagina-productos .categoria-producto {
+    color: #93c5fd;
+    font-size: 14px;
+}
+
+/* Precio */
+
+body.pagina-productos .precio-producto {
+    color: #60a5fa;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+/* Stock */
+
+body.pagina-productos .stock-producto {
+    color: #cbd5e1;
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+/* Botones de cada tarjeta */
+
+body.pagina-productos .acciones-producto {
+    display: flex;
+    gap: 10px;
+}
+
+body.pagina-productos .acciones-producto button {
+    flex: 1;
+    padding: 11px 8px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Editar */
+
+body.pagina-productos .btn-editar-producto {
+    background-color: #2563eb;
+    border: 1px solid #3b82f6;
+}
+
+body.pagina-productos .btn-editar-producto:hover {
+    background-color: #1d4ed8;
+}
+
+/* Eliminar */
+
+body.pagina-productos .btn-eliminar-producto {
+    background-color: #991b1b;
+    border: 1px solid #dc2626;
+}
+
+body.pagina-productos .btn-eliminar-producto:hover {
+    background-color: #b91c1c;
+}
+
+/* Mensaje cuando no hay productos */
+
+body.pagina-productos .mensaje-sin-productos {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+
+    text-align: center;
+    background-color: #142344;
+    border: 1px solid #294775;
+    border-radius: 15px;
+}
+
+body.pagina-productos .mensaje-sin-productos span {
+    font-size: 40px;
+}
+
+body.pagina-productos .mensaje-sin-productos h3 {
+    color: #93c5fd;
+}
+
+/* Navegación inferior */
+
+body.pagina-productos .navegacion-productos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 35px 0 20px;
+}
+
+body.pagina-productos .navegacion-productos button {
+    padding: 13px 22px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Agregar otro */
+
+body.pagina-productos .btn-agregar-otro {
+    background-color: #2563eb;
+    color: white;
+    border: 1px solid #3b82f6;
+}
+
+body.pagina-productos .btn-agregar-otro:hover {
+    background-color: #1d4ed8;
+}
+
+/* Volver al perfil */
+
+body.pagina-productos .btn-volver-perfil-productos {
+    background-color: transparent;
+    color: #93c5fd;
+    border: 1px solid #1e3a8a;
+}
+
+body.pagina-productos .btn-volver-perfil-productos:hover {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+/* Adaptación a celulares */
+
+@media (max-width: 600px) {
+    body.pagina-productos {
+        padding: 15px;
+    }
+
+    body.pagina-productos .encabezado-lista-productos h1 {
+        font-size: 30px;
+    }
+
+    body.pagina-productos .contenido-lista-productos > h2 {
+        font-size: 24px;
+    }
+
+    body.pagina-productos .rejilla-productos {
+        grid-template-columns: 1fr;
+    }
+
+    body.pagina-productos .navegacion-productos {
+        flex-direction: column;
+    }
+
+    body.pagina-productos .navegacion-productos button {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   PÁGINA EDITAR PRODUCTO
+======================================== */
+
+body.pagina-editar-producto {
+    background-image: none;
+    background-color: #0b1530;
+    color: white;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+
+body.pagina-editar-producto .encabezado-editar-producto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+body.pagina-editar-producto .encabezado-editar-producto h1 {
+    margin: 10px 0;
+    font-size: 34px;
+    text-shadow: 0 0 12px rgba(37, 99, 235, 0.8);
+}
+
+body.pagina-editar-producto .encabezado-editar-producto p {
+    color: #bfdbfe;
+    font-size: 15px;
+}
+
+/* Contenedor */
+
+body.pagina-editar-producto .contenido-editar-producto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Formulario */
+
+body.pagina-editar-producto .formulario-editar-producto {
+    width: 100%;
+    max-width: 450px;
+    box-sizing: border-box;
+
+    background-color: #142344;
+    padding: 30px;
+
+    border: 1px solid #294775;
+    border-radius: 15px;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+body.pagina-editar-producto .formulario-editar-producto h2 {
+    color: #93c5fd;
+    font-size: 25px;
+    margin: 0 0 12px;
+}
+
+body.pagina-editar-producto .texto-editar-producto {
+    color: #cbd5e1;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Campos */
+
+body.pagina-editar-producto .campo-editar-producto {
+    margin-bottom: 18px;
+}
+
+body.pagina-editar-producto .campo-editar-producto label {
+    display: block;
+    color: #e2e8f0;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+body.pagina-editar-producto .campo-editar-producto input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+    background-color: #0b1530;
+    color: white;
+
+    border: 1px solid #3b5990;
+    border-radius: 8px;
+
+    font-size: 15px;
+    outline: none;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+body.pagina-editar-producto .campo-editar-producto input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+/* Botón guardar */
+
+body.pagina-editar-producto .btn-guardar-cambios {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin-top: 25px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
+}
+
+body.pagina-editar-producto .btn-guardar-cambios:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Mensaje */
+
+body.pagina-editar-producto #mensajeEditar {
+    color: #93c5fd;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Volver a productos */
+
+body.pagina-editar-producto .btn-volver-productos {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 11px;
+    margin-top: 15px;
+
+    background-color: transparent;
+    color: #93c5fd;
+
+    border: 1px solid #1e3a8a;
+    border-radius: 8px;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+body.pagina-editar-producto .btn-volver-productos:hover {
+    background-color: #1e3a8a;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 600px) {
+    body.pagina-editar-producto {
+        padding: 15px;
+    }
+
+    body.pagina-editar-producto .formulario-editar-producto {
+        padding: 22px;
+    }
+
+    body.pagina-editar-producto .encabezado-editar-producto h1 {
+        font-size: 30px;
+    }
+}
+
+/* ========================================
+   ENCABEZADO DE NAVEGACIÓN - MI PERFIL
+======================================== */
+
+body.pagina-perfil .encabezado-perfil {
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    padding: 18px 35px;
+
+    background-color: rgba(11, 21, 48, 0.95);
+    border-bottom: 1px solid #294775;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Logo */
+
+body.pagina-perfil .logo-compustore {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+
+    text-shadow: 0 0 10px rgba(37, 99, 235, 0.7);
+    transition: color 0.3s ease;
+}
+
+body.pagina-perfil .logo-compustore:hover {
+    color: #93c5fd;
+}
+
+/* Menú */
+
+body.pagina-perfil .menu-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+body.pagina-perfil .menu-perfil a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+
+    padding: 10px 13px;
+    border-radius: 7px;
+
+    transition: all 0.3s ease;
+}
+
+body.pagina-perfil .menu-perfil a:hover {
+    background-color: #1e3a8a;
+    color: white;
+}
+
+/* Contenido del perfil */
+
+body.pagina-perfil .contenido-perfil {
+    width: 100%;
+    padding-top: 15px;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+
+    body.pagina-perfil .encabezado-perfil {
+        flex-direction: column;
+        padding: 18px 15px;
+        gap: 12px;
+    }
+
+    body.pagina-perfil .menu-perfil {
+        width: 100%;
+        gap: 5px;
+    }
+
+    body.pagina-perfil .menu-perfil a {
+        padding: 9px;
+        font-size: 13px;
+    }
+}

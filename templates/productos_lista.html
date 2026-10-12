@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Productos - CompuStore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body class="pagina-productos">
+
+    <!-- Encabezado -->
+    <header class="encabezado-lista-productos">
+        <h1>CompuStore</h1>
+        <p>Tu tienda de artículos de computación</p>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="contenido-lista-productos">
+
+        <h2>Productos disponibles</h2>
+
+        <p class="descripcion-productos">
+            Consultá los artículos registrados en tu tienda.
+        </p>
+
+        <!-- Comprobar si hay productos -->
+        {% if productos %}
+
+            <section class="rejilla-productos">
+
+                {% for producto in productos %}
+
+                    <article class="tarjeta-producto">
+
+                        <div class="icono-producto">
+                            💻
+                        </div>
+
+                        <h3>{{ producto[1] }}</h3>
+
+                        <p class="categoria-producto">
+                            {{ producto[2] }}
+                        </p>
+
+                        <p class="precio-producto">
+                            ${{ producto[3] }}
+                        </p>
+
+                        <p class="stock-producto">
+                            Stock disponible:
+                            <strong>{{ producto[4] }}</strong>
+                        </p>
+
+                        <!-- Acciones del producto -->
+                        <div class="acciones-producto">
+
+                            <button
+                                type="button"
+                                class="btn-editar-producto"
+                                onclick="window.location.href='/editar_producto/{{ producto[0] }}'">
+                                Editar
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn-eliminar-producto"
+                                onclick="eliminarProducto({{ producto[0] }})">
+                                Eliminar
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                {% endfor %}
+
+            </section>
+
+        {% else %}
+
+            <div class="mensaje-sin-productos">
+                <span>📦</span>
+                <h3>No hay productos registrados</h3>
+                <p>Agregá tu primer producto para que aparezca en esta sección.</p>
+            </div>
+
+        {% endif %}
+
+        <!-- Botones de navegación -->
+        <div class="navegacion-productos">
+
+            <button
+                type="button"
+                class="btn-agregar-otro"
+                onclick="window.location.href='/productos'">
+                Agregar otro producto
+            </button>
+
+            <button
+                type="button"
+                class="btn-volver-perfil-productos"
+                onclick="window.location.href='/perfil_pagina'">
+                Volver al perfil
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- JavaScript existente -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+    <script>
+        // Comprobar si existe el token
+        const token = localStorage.getItem("token");
+
+        if (!token) {
+            alert("Necesitas iniciar sesión.");
+            window.location.href = "/";
+        }
+    </script>
+
+</body>
+</html>

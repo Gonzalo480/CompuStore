@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iniciar sesión - CompuStore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+
+</head>
+
+<body class="pagina-login">
+
+    <h1>CompuStore</h1>
+
+    <h2>Iniciar sesión</h2>
+
+    <form id="formLogin">
+
+        <label>Usuario:</label>
+
+        <br>
+
+        <input type="text" id="usuario" required>
+
+        <br><br>
+
+
+        <label>Contraseña:</label>
+
+        <br>
+
+        <input type="password" id="password" required>
+
+        <br><br>
+
+
+        <button type="submit">
+            Iniciar sesión
+        </button>
+
+    </form>
+
+    <p id="mensaje"></p>
+
+    <br>
+
+    <a href="/">
+        Volver al inicio
+    </a>
+
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

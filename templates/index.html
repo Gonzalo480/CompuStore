@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompuStore - Artículos de Computación</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+    <!-- Ocultamos estos textos con CSS porque ya están dibujados en la imagen de fondo -->
+    <div class="textos-ocultos">
+        <h1>🖥️ CompuStore</h1>
+    </div>
+
+    <!-- Contenedor posicionado en la parte inferior -->
+    <div class="contenedor-botones-index">
+        <button type="button" class="btn-index" onclick="window.location.href='/login'">
+            👤 Iniciar sesión
+        </button>
+
+        <button type="button" class="btn-index" onclick="window.location.href='/registro'">
+            ➕ Crear cuenta
+        </button>
+
+        <button type="button" class="btn-index" onclick="accederPerfil()">
+            ⚙️ Mi perfil
+        </button>
+    </div>
+
+    <!-- Mensaje del perfil -->
+    <p id="perfilMensaje"></p>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

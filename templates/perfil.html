@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mi perfil - CompuStore</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body class="pagina-perfil">
+
+    <!-- Encabezado de navegación -->
+    <header class="encabezado-perfil">
+
+        <a href="/" class="logo-compustore">
+            💻 CompuStore
+        </a>
+
+        <nav class="menu-perfil">
+
+            <a href="/">Inicio</a>
+
+            <a href="/productos_lista">Ver productos</a>
+
+            <a href="/productos">Agregar producto</a>
+
+            <a href="#" onclick="cerrarSesion(); return false;">
+                Cerrar sesión
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- Contenido del perfil -->
+    <main class="contenido-perfil">
+
+        <p id="perfilMensaje">
+            Comprobando sesión...
+        </p>
+
+        <!-- Botones del perfil -->
+        <div id="opcionesPerfil"
+             class="contenedor-botones-perfil"
+             style="display: none;">
+
+            <button
+                class="btn-perfil"
+                type="button"
+                onclick="window.location.href='/productos'">
+                Agregar producto
+            </button>
+
+            <button
+                class="btn-perfil"
+                type="button"
+                onclick="window.location.href='/productos_lista'">
+                Ver productos
+            </button>
+
+            <button
+                class="btn-perfil"
+                type="button"
+                onclick="cerrarSesion()">
+                Cerrar sesión
+            </button>
+
+        </div>
+
+        <div class="contenedor-botones-perfil">
+
+            <button
+                class="btn-perfil"
+                type="button"
+                onclick="window.location.href='/'">
+                Volver al inicio
+            </button>
+
+        </div>
+
+    </main>
+
+    <script>
+        // Obtener el token guardado
+        const token = localStorage.getItem("token");
+
+        // Comprobar si existe el token
+        if (!token) {
+
+            document.getElementById("perfilMensaje").textContent =
+                "No hay una sesión iniciada.";
+
+        } else {
+
+            // Validar el token con Flask
+            fetch("/perfil", {
+                method: "GET",
+                headers: {
+                    "Authorization": "Bearer " + token
+                }
+            })
+
+            .then(response => {
+
+                if (!response.ok) {
+                    throw new Error("Token inválido");
+                }
+
+                return response.json();
+
+            })
+
+            .then(data => {
+
+                document.getElementById("perfilMensaje").textContent =
+                    "Bienvenido, " + data.usuario;
+
+                document.getElementById("opcionesPerfil").style.display =
+                    "flex";
+
+            })
+
+            .catch(error => {
+
+                console.error("Error:", error);
+
+                localStorage.removeItem("token");
+
+                document.getElementById("perfilMensaje").textContent =
+                    "Tu sesión no es válida. Inicia sesión nuevamente.";
+
+            });
+        }
+
+        // Cerrar sesión
+        function cerrarSesion() {
+
+            localStorage.removeItem("token");
+
+            window.location.href = "/";
+
+        }
+    </script>
+
+</body>
+</html>
