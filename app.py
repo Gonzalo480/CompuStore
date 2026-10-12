@@ -4,7 +4,7 @@ import hashlib
 import jwt
 
 from datetime import datetime, timedelta
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 
 app = Flask(__name__)
@@ -98,7 +98,7 @@ def registro():
             """, (usuario, email, password_hash))
 
             conexion.commit()
-            return "Cuenta creada correctamente"
+            return redirect("/login")
 
         except sqlite3.IntegrityError:
             return "El usuario o el email ya están registrados.", 400
